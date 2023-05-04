@@ -2,15 +2,15 @@
     display: none;
     border: 1px solid #ff4655;
     padding: 10px;
-  }
+}
 
-.fotinha{
-    width:50px;
-    height:50px;
+.fotinha {
+    width: 50px;
+    height: 50px;
     margin-left: 6px;
 }
 
-button{
+button {
     background-color: #ff4655;
     color: #1C1C1C;
     font-size: 15px;
@@ -21,7 +21,7 @@ button{
     font-weight: bold;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,6 +34,7 @@ button{
 
 .carousel {
     position: relative;
+    display: flex;
     width: 994px;
     height: 559px;
 }
@@ -78,14 +79,30 @@ main {
     gap: 0px;
 }
 
+#logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
 .cabecalho {
     background-color: #ff4655;
     margin: auto;
     display: flex;
     width: 100%;
-    height: 40px;
+    height: 45px;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.entrar{
+    background-color: #1C1C1C;
+    padding: 7px 20px;
+    border-radius: 7px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    margin-bottom: 15px;
 }
 
 p {
@@ -127,6 +144,3 @@ hr {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
-
-  
