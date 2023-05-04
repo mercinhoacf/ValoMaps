@@ -5,24 +5,21 @@
   <title>Home</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
-  <!--<link rel="stylesheet" href="login.css" />-->
-  <link href="https://mercinhoacf.github.io/ValoMaps/login.css" rel="stylesheet"/>
-  <script src="https://mercinhoacf.github.io/ValoMaps/login.js"> </script>
+  <link rel="stylesheet" href="login.css" />
 
 </head>
 
 <body>
 
   <div class="cabecalho">
-    <img src="https://static.wikia.nocookie.net/valorant/images/0/09/Wingman.png/revision/latest?cb=20230307075701"
-      width="30px" height="30px" style="margin-left: 10px;">
+    <img id="logo" src="../imagens/Logo.png">
     <p> ValoMaps </p>
   </div>
 
-  <div class="sova">
+  <div id="fade">
     <img
       src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt516d37c6c84fcda0/625db737c9aa404b76ddd594/Fade_Key_Art_587x900_for_Website.png"
-      alt="Sova">
+      alt="Fade">
   </div>
 
   <header>
@@ -32,19 +29,22 @@
   <main>
     <input type="text" name="" id="nome" placeholder="Nome de Usuário">
 
-    <input type="password" name="" id="senha" placeholder="Senha">
+    <input type="text" name="" id="senha" placeholder="Senha">
 
     <div class="alertaLogin">
       <p id="alertaLogin"></p>
     </div>
 
     <button onclick="login()" id="btn">Login</button>
+
+    <button id="conta" onclick="window.location.href='../cadastro/cadastro.html'"> Ainda não tem uma conta? </button>
+
   </main>
 
-   <div class="raze">
+   <div id="chamber">
     <img
       src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt6f1392b30784e029/618d9da0d380f814d61f001c/WebUpdate_Chamber_KeyArt.png"
-      alt="Raze" style="position: absolute; top: 60px; right: 0;">
+      alt="Chamber">
   </div>
 
   <script src="login.js"></script>
