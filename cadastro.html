@@ -5,21 +5,17 @@
   <title>Home</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
-  <!--<link rel="stylesheet" href="cadastro.css" />-->
-  <link href="https://mercinhoacf.github.io/ValoMaps/cadastro.css" rel="stylesheet"/>
-  <script src="https://mercinhoacf.github.io/ValoMaps/cadastro.js"> </script>
-
+  <link rel="stylesheet" href="cadastro.css" />
 </head>
 
 <body>
 
   <div class="cabecalho">
-    <img src="https://static.wikia.nocookie.net/valorant/images/0/09/Wingman.png/revision/latest?cb=20230307075701" width="30px" height="30px"
-    style="margin-left: 10px;">
+    <img id="logo" src="../imagens/Logo.png">
     <p> ValoMaps </p>
   </div>
 
-  <div class="gekko">
+  <div id="gekko">
     <img
       src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltc942933be01094ae/6402724fe9f75310481c3851/V_AGENTS_587x900_Gekko2.png"
       alt="Gekko">
@@ -30,31 +26,33 @@
   </header>
 
   <main>
-    <!-- <label for="nome">Email:</label> -->
+
     <input type="text" name="" id="nome" placeholder="Nome de Usuário">
-    <p id="alertaNome"></p>
+    <p class="aviso" id="alertaNome"></p>
 
     <input type="text" name="" id="email" placeholder="Email">
-    <p id="alertaEmail"></p>
+    <p class="aviso" id="alertaEmail"></p>
 
-    <!-- <label for="senha">Senha:</label> -->
     <input type="text" name="" id="senha" placeholder="Senha">
-    <p id="alertaSenha"></p>
+    <p class="aviso" id="alertaSenha"></p>
 
     <input type="text" name="" id="CPF" placeholder="CPF">
-    <p id="alertaCPF"></p>
+    <p class="aviso" id="alertaCPF"></p>
 
     <label for="nascimento">Informe a data do seu nascimento:</label>
     <input type="date" id="nascimento" name="" min="1930-01-01" max="2014-01-01">
-    <p id="alertaNascimento"></p>
+    <p class="aviso" id="alertaNascimento"></p>
 
     <button onclick="cadastrar()"> Cadastrar </button>
+
+    <button id="conta" onclick="window.location.href='../login/login.html'"> Já tem uma conta? </button>
+
   </main>
 
-  <div class="jett">
+  <div id="jett">
     <img
       src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltceaa6cf20d328bd5/5eb7cdc1b1f2e27c950d2aaa/V_AGENTS_587x900_Jett.png"
-      alt="Jett" style="position: absolute; top: 60px; right: 0;">
+      alt="Jett">
   </div>
 
   <script src="cadastro.js"></script>
