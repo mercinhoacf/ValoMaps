@@ -3,6 +3,14 @@ if (localStorage.getItem('cadastrados')) {
   usuarios = JSON.parse(localStorage.getItem('cadastrados'));
 }
 
+var meuBotao1 = document.getElementById("conta");
+  meuBotao1.addEventListener("mouseover", function () {
+    meuBotao1.style.color = " #fff";
+  });
+  meuBotao1.addEventListener("mouseout", function () {
+    meuBotao1.style.color = "#ff4655";
+  });
+
 function cadastrar() {
   let guardaNome = document.getElementById('nome').value;
   let guardaSenha = document.getElementById('senha').value;
@@ -21,7 +29,7 @@ function cadastrar() {
       usuarios.push(usuario);
       localStorage.setItem('cadastrados', JSON.stringify(usuarios));
       alert('Cadastro realizado!');
-      location.assign('login.html');
+      location.assign('../login/login.html');
     } else {
       document.getElementById('alertaNome').innerHTML = 'O Nome de Usuário já está em uso! Tente outro nome';
       document.getElementById('alertaNome').style.color = '#ff4655';
@@ -97,23 +105,31 @@ function cadastrar() {
     }
   }
 
+  function procura_usuario(nome) {
+    let index = usuarios.findIndex((element) => {
+      return element.nome == nome
+    })
+    return index
+  }
+
+
   let nome = document.getElementById('nome');
   let senha = document.getElementById('senha');
   let email = document.getElementById('email');
   let CPF = document.getElementById('CPF');
   let nascimento = document.getElementById('nascimento');
 
-  senha.addEventListener('keypress', (event) => {
-    if (event.key == 'Enter') {
-      cadastrar()
-    }
-  });
   nome.addEventListener('keypress', (event) => {
     if (event.key == 'Enter') {
       cadastrar()
     }
   });
   email.addEventListener('keypress', (event) => {
+    if (event.key == 'Enter') {
+      cadastrar()
+    }
+  });
+  senha.addEventListener('keypress', (event) => {
     if (event.key == 'Enter') {
       cadastrar()
     }
@@ -129,10 +145,4 @@ function cadastrar() {
     }
   });
 
-  function procura_usuario(nome) {
-    let index = usuarios.findIndex((element) => {
-      return element.nome == nome
-    })
-    return index
-  }
 }
