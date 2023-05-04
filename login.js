@@ -16,7 +16,7 @@ function login(){
       }, 3000);
     }else{
         alert("Bem-vindo!")
-        location.assign('carro.html')
+        location.assign('../home/carro.html')
     }
 }
 
@@ -39,4 +39,12 @@ nome.addEventListener('keypress', (event) => {
   if (event.key == 'Enter') {
     login()
   }
+});
+
+var meuBotao1 = document.getElementById("conta");
+meuBotao1.addEventListener("mouseover", function() {
+  meuBotao1.style.color = " #fff";
+});
+meuBotao1.addEventListener("mouseout", function() {
+  meuBotao1.style.color = "#ff4655";
 });
